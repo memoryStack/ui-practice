@@ -2,6 +2,7 @@ import { BoxSizing } from './cssConcepts/boxSizing';
 import { WidthAutoVSHundredPercent } from './cssConcepts/widthAutoVSHundredPercent';
 import { HeightAutoVSHundredPercent } from './cssConcepts/heightAutoVSHundredPercent';
 import { MinMaxWidthAndHeight } from './cssConcepts/minMaxWidthAndHeight';
+import { IntrinsicVsExtrinsicSizing } from './cssConcepts/intrinsicVsExtrinsicSizing';
 
 import './App.css';
 
@@ -11,7 +12,8 @@ function App() {
       {/* <BoxSizing /> */}
       {/* <WidthAutoVSHundredPercent /> */}
       {/* <HeightAutoVSHundredPercent /> */}
-      <MinMaxWidthAndHeight />
+      {/* <MinMaxWidthAndHeight /> */}
+      <IntrinsicVsExtrinsicSizing />
     </div>
   );
 }
