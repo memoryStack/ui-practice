@@ -3,6 +3,7 @@ import { WidthAutoVSHundredPercent } from './cssConcepts/widthAutoVSHundredPerce
 import { HeightAutoVSHundredPercent } from './cssConcepts/heightAutoVSHundredPercent';
 import { MinMaxWidthAndHeight } from './cssConcepts/minMaxWidthAndHeight';
 import { IntrinsicVsExtrinsicSizing } from './cssConcepts/intrinsicVsExtrinsicSizing';
+import { Display } from './cssConcepts/display';
 
 import './App.css';
 
@@ -13,7 +14,8 @@ function App() {
       {/* <WidthAutoVSHundredPercent /> */}
       {/* <HeightAutoVSHundredPercent /> */}
       {/* <MinMaxWidthAndHeight /> */}
-      <IntrinsicVsExtrinsicSizing />
+      {/* <IntrinsicVsExtrinsicSizing /> */}
+      <Display />
     </div>
   );
 }
