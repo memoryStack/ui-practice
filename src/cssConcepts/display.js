@@ -59,7 +59,8 @@ export const Display = () => {
       <div>
         <p>
           when <b>"display": "inline-block"</b> then the box will appear in the same line and we can give
-          width and height also to these elements and we can give vertical margins also
+          width and height also to these elements and we can give vertical margins also. unlike block level types boxes
+          these types of boxes take horizontal space as much as their content needs to properly fit.
         </p>
         <div style={{ display: 'inline-block', height: 100, backgroundColor: 'yellow' }}>
           first inline-block level box
