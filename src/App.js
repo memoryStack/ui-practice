@@ -4,6 +4,8 @@ import { HeightAutoVSHundredPercent } from './cssConcepts/heightAutoVSHundredPer
 import { MinMaxWidthAndHeight } from './cssConcepts/minMaxWidthAndHeight';
 import { IntrinsicVsExtrinsicSizing } from './cssConcepts/intrinsicVsExtrinsicSizing';
 import { Display } from './cssConcepts/display';
+import { MediaQuery } from './cssConcepts/mediaQuery';
+
 
 import './App.css';
 
@@ -15,7 +17,8 @@ function App() {
       {/* <HeightAutoVSHundredPercent /> */}
       {/* <MinMaxWidthAndHeight /> */}
       {/* <IntrinsicVsExtrinsicSizing /> */}
-      <Display />
+      {/* <Display /> */}
+      <MediaQuery />
     </div>
   );
 }
