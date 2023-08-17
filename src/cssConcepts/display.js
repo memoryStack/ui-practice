@@ -124,3 +124,14 @@ export const Display = () => {
     </div>
   )
 }
+
+
+/*
+ 
+  0. read "display: run-in" deeply. seems rare to use
+      Yeah, not a lot of browser which supports it.
+  1. get some experience on display-internal properties.
+  2. Read why "display: contents" is needed. is it rere or is it used commonly ??
+      what's a pseudo-box ??
+
+*/

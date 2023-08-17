@@ -5,7 +5,7 @@ import { MinMaxWidthAndHeight } from './cssConcepts/minMaxWidthAndHeight';
 import { IntrinsicVsExtrinsicSizing } from './cssConcepts/intrinsicVsExtrinsicSizing';
 import { Display } from './cssConcepts/display';
 import { MediaQuery } from './cssConcepts/mediaQuery';
-
+import Test from './cssConcepts/experiment';
 
 import './App.css';
 
@@ -18,7 +18,9 @@ function App() {
       {/* <MinMaxWidthAndHeight /> */}
       {/* <IntrinsicVsExtrinsicSizing /> */}
       {/* <Display /> */}
-      <MediaQuery />
+      {/* <MediaQuery /> */}
+
+      <Test />
     </div>
   );
 }
