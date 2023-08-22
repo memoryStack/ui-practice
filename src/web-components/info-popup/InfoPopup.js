@@ -6,10 +6,8 @@ class InfoPopup extends HTMLElement {
 
   connectedCallback() {
     this.attachShadow({ mode: 'open' })
-    this.attachShadowDomStyle()
-    this.shadowRoot.appendChild(this.getAnchorElement())
-    this.addEventListener('pointerenter', this.showPopup)
-    this.addEventListener('pointerleave', this.hidePopup)
+    const template = document.getElementById('my-paragraph')
+    this.shadowRoot.appendChild(template.content.cloneNode(true))
   }
 
   attachShadowDomStyle() {
