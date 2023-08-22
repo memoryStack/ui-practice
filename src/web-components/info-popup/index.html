@@ -27,13 +27,23 @@
         padding: 5px;
       }
     </style>
-    <p>My paragraph</p>
+    <p>
+      <slot></slot>
+      <slot name="my-text">
+        My Default Text
+      </slot>
+      <slot></slot>
+    </p>
   </template>
-
 
   <main>
     <h1>Welcome to My Website</h1>
-    <info-popup anchorText="@" desc="some random desc"></info-popup>
+    <info-popup anchorText="@" desc="some random desc">
+      <span slot="my-text">Let's have some different text!</span>
+      <div style="">div content</div>
+      <div>outside the slots</div>
+
+    </info-popup>
     <p>My paragraph outside shadow DOM</p>
   </main>
 
