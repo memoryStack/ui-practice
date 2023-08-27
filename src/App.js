@@ -7,6 +7,8 @@ import { Display } from './cssConcepts/display';
 import { MediaQuery } from './cssConcepts/mediaQuery';
 import Test from './cssConcepts/experiment';
 import { ContainingBlock } from './cssConcepts/containingBlock';
+import { BlockFormattingContext } from './cssConcepts/blockFormattingContext';
+import { InlineFormattingContext } from './cssConcepts/inlineFormattingContext';
 
 import './App.css';
 
@@ -21,7 +23,9 @@ function App() {
       {/* <Display /> */}
       {/* <MediaQuery /> */}
       {/* <Test /> */}
-      <ContainingBlock />
+      {/* <ContainingBlock /> */}
+      {/* <BlockFormattingContext /> */}
+      <InlineFormattingContext />
     </div>
   );
 }
