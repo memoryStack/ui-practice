@@ -9,6 +9,7 @@ import Test from './cssConcepts/experiment';
 import { ContainingBlock } from './cssConcepts/containingBlock';
 import { BlockFormattingContext } from './cssConcepts/blockFormattingContext';
 import { InlineFormattingContext } from './cssConcepts/inlineFormattingContext';
+import { Floats } from './cssConcepts/float';
 
 import './App.css';
 
@@ -25,7 +26,8 @@ function App() {
       {/* <Test /> */}
       {/* <ContainingBlock /> */}
       {/* <BlockFormattingContext /> */}
-      <InlineFormattingContext />
+      {/* <InlineFormattingContext /> */}
+      <Floats />
     </div>
   );
 }
