@@ -6,6 +6,7 @@ import { IntrinsicVsExtrinsicSizing } from './cssConcepts/intrinsicVsExtrinsicSi
 import { Display } from './cssConcepts/display';
 import { MediaQuery } from './cssConcepts/mediaQuery';
 import Test from './cssConcepts/experiment';
+import { ContainingBlock } from './cssConcepts/containingBlock';
 
 import './App.css';
 
@@ -19,8 +20,8 @@ function App() {
       {/* <IntrinsicVsExtrinsicSizing /> */}
       {/* <Display /> */}
       {/* <MediaQuery /> */}
-
-      <Test />
+      {/* <Test /> */}
+      <ContainingBlock />
     </div>
   );
 }

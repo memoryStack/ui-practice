@@ -1,226 +1,220 @@
-// here write demos
-// for containing block. as understanding it is very crucial
 
-
-/*
-    position = static
-      element is placed as per the normal flow. and top, left, right, bottom
-      and z-index affect it in no way.
-    
-    position = relative
-      will be positioned in content-area of nearest block container.
-      Ques -> can block container be an inline element ?
-              Yes, like display: inline-block
-              can it be an inline element with IFC inside ??
-              does inline elements (not box) ever establish BFC inside ?
-              NO. it is not recommended. (I am confused regarding this)
-      to understand these questions better see the below. i have a block
-      level element inside <a> tag. so is <a> a block container or not here ??
-        Below is the example. would love to visit it next time and make
-        sense of what is going on.
-            const Experiment = () => {
-  
-              can't make a sense of it. i think it's better not to use block element
-              inside inline elements else it will ache the head.
-              read below to understand it if i ever need to.
-              https://www.w3.org/TR/CSS2/visuren.html#anonymous-block-level
-            
-            return (
-              <div style={{ backgroundColor: 'grey' }}>
-                <span>
-                  <em>emphasis</em>
-                  <a href='google.com' style={{
-                    backgroundColor: 'red',
-                    position: 'relative',
-                    left: 10,
-                  }}>
-                    <a href='google.com' > totototo</a>
-                    <div style={{ backgroundColor: 'green', position: 'relative', left: 0 }}>
-                      jhghjdk
-                    </div>
-                    <a href='google.com' > totototo</a>
-                  </a>
-                </span>
-                <a href='google.com' > uisfh</a>
-                <a href='google.com' style={{ marginLeft: 8 }}> uisfh</a>
-                <a href='google.com' style={{ marginLeft: 8 }}> uisfh</a>
-
-              </div>
-            )
-
-          }
-
-          export default Experiment
-*/
-
-/*
-  some definition/terms came across while exploring
-    a. "initial containing block"
-        The containing block in which the root element (<html>) resides
-        is a rectangle. It has the dimensions of the viewport
-        (for continuous media) or the page area (for paged media).
-      TODO: what is "continuous media" and "paged media" ??
-*/
-
-/*
-    for position = "absolute"
-      1. element will be placed relative to the nearest positioned ancestor
-      2. if positioned ancestor doesn't exist then it will be contained by the 
-          "Initial Containing Block".
-      Note: if we don't use left/right or top/bottom properties on the element
-              then element will be placed where it would have been placed if it's
-              position was static in that particular dimension. Read the below document 
-              for better understanding. also read the CSS specs.
-              https://stackoverflow.com/questions/10243991/position-absolute-without-setting-top-left-bottom-right#comment66484429_10244977
-      just wondering question
-          Can "Containing Block" ever be an inline element or it must be
-          block element only ??
-          Yes it can be an inline element also
-      Note: if element display is inline and width and height are used then the inline element will take
-              the dimensions as specified by width and height and this behaviour is peculiar to me.
-              TODO: do some research on this through some specs, till then just remember it.
-                    or use this logic (The element establishes a new block formatting context (BFC) for its contents.)
-
-
-      const Experiment = () => {
+const ImportanceOfContainingBlocks = () => {
   return (
-    <div
-      style={{
-        width: 200,
-        height: 200,
-        backgroundColor: 'red',
-        position: 'relative',
-        display: 'inline'
-      }}
-    >
-      <div style={{
-        width: 150,
-        height: 150,
-        backgroundColor: 'blue',
-        margin: '25px'
-      }} >
-        <div style={{
-          position: 'absolute',
-          width: 100,
-          height: 100,
-          backgroundColor: 'yellow',
-          border: '1px solid black',
+    <>
+      <h3>Importance of Containing blocks</h3>
+      <p>
+        containing blocks are helpful because if values for <strong>box model properties</strong> and <strong>offset properties</strong> are
+        given in % then for that element these values will depend on
+        the dimensions of element's containing block's content-box. In short we can say that the size and position of an element depends on it's containing block.
+        <br />
+        <strong>Note:</strong> if box-sizing of the parent is content-box then padding will also affect the sizing and position of the element.
+        <br />
+        <br />
+        The properties whose values are affected are <strong>height, width, left, top, right, bottom, padding and margin</strong>.
+        <br />
+        <br />
+        The <strong>height, top, and bottom</strong> properties compute their percentage values from the <strong>height</strong> of the containing block.
+        <br />
+        The <strong>width, left, right, padding, and margin</strong> properties compute their percentage values from the <strong>width</strong> of the containing block.
+      </p>
+    </>
+  )
+}
 
-          top: 5,
-          left: 5,
+const StaticAndRelativePositionedExamples = () => {
+  const renderHeading = () => {
+    return (
+      <>
+        <h3>Containing block of Static and Relative positioned element</h3>
+        <p style={{ marginLeft: 40 }}>
+          for static or relative positioned boxes the containing block is neareset ancestor
+          which is either the block container or any box which establishes any Formatting Context.
+          <br />
+          Note: the content-area will be used for calculating height/width mentioned in %. here in first example the block container
+          is 300*300 but it's descendent is 130*130 because the block container has padding of 20px.
+        </p>
+      </>
+    )
+  }
 
-        }} >
+  const renderBlockContainerAsContainingBlock = () => {
+    const renderDefinition = () => {
+      return (
+        <p>
+          here the pink box is the "containing block" of the red box. because pink is the nearest "block container"
+          ancestor.
+        </p>
+      )
+    }
 
+    return (
+      <div style={{ marginLeft: 40 }}>
+        {renderDefinition()}
+        <div style={{ width: 300, height: 300, backgroundColor: "pink", padding: 20 }}>
+          <div style={{ width: '50%', height: '50%', backgroundColor: "red" }} />
         </div>
       </div>
-    </div>
-  )
+    )
+  }
 
-}
-
-export default Experiment
-*/
-
-/*
-  1. for position = "fixed" the containing block will be the "initial containing block "
-      established by viewport. basically <html /> container or element.
-  2. but if we apply some CSS Transform Spec to any element in it's ancestor then
-      that ancestor will behave as the "containing block" of the fixed positioned element
-      and element will scroll if the ancestor is scrolled.
-      Note: the containing block will be the content-area of the containing block. 
-            i am writing this because in case of absolute the containg block is the
-            paddign-box of the positioned ancestor.
-
-      Reason of this happening is that Stacking Context is formed due to using transform here
-      so in stacking context the absolute and fixed positioned elements will be contained.
-      Now Question comes is that what what makes a Stacking Context ??
-        Ans -> a lot of factors create a Stacking Context. read on MDN
-      and do all Stacking Contexts contain the absolute and fixed element ??
-        Ans -> no, what i found is that only when "CSS Transform Spec" is applied only
-                then the ancestor contains the element.
-                properties like transform, will-change, filter,
-                backdrop-filter, perspective
-    What to read from here ??
-        1. Stacking Context
-        2. CSS Transform Spec
-        3. and why does all Stacking Context contain all the absolute or fixed 
-            elements inside them  
-
-    CODE:
-        const Experiment = () => {
-  return (
-    <div
-      style={{
-        
-          transform, filter, perspective propoerties none the ancestor becomes
-          the containing block
-        
-        // transform: 'scaleY(1)' // works
-        // filter: 'grayscale(100%)', // works
-        // opacity: 0.9 // -> doesn't work in this Stacking Context
-        // backdropFilter: 'blur(10px)' // -> works
-        // perspective: 800 // works
-        willChange: 'transform', // works
-        // isolation: 'isolate' // doesnt work
-
-        // position: 'relative', // doesnt work
-        // zIndex: 1,
-
-        padding: 10,
-        border: '5px solid black',
-        backgroundColor: 'yellow'
-
-      }}
-    >
-      <div style={{
-        position: 'fixed',
-        width: 100,
-        height: 100,
-        backgroundColor: 'red',
-      }} />
-      <div>
-        <div style={{
-          marginTop: 120,
-          width: 100,
-          height: 100,
-          backgroundColor: 'green'
-        }} />
-        <div style={{
-          marginTop: 120,
-          width: 100,
-          height: 100,
-          backgroundColor: 'green'
-        }} />
-        <div style={{
-          marginTop: 120,
-          width: 100,
-          height: 100,
-          backgroundColor: 'green'
-        }} />
-        <div style={{
-          marginTop: 120,
-          width: 100,
-          height: 100,
-          backgroundColor: 'green'
-        }} />
-        <div style={{
-          marginTop: 120,
-          width: 100,
-          height: 100,
-          backgroundColor: 'green'
-        }} />
-        <div style={{
-          marginTop: 120,
-          width: 100,
-          height: 100,
-          backgroundColor: 'green'
-        }} />
+  const renderFormattingContextEstablisherAsContainingBlock = () => {
+    return (
+      <div style={{ marginLeft: 40 }}>
+        <p>
+          here the blue background span establishes the Inline Formatting Context (IFC). it is the containing block of
+          green background span element
+        </p>
+        <span style={{ backgroundColor: 'blue' }}>
+          jksh s sdj s s s
+          <span style={{ backgroundColor: 'green' }}>iutheij eiot iw iweui </span>
+          ogjh gweiouf wie we 394857v 89
+        </span>
       </div>
-    </div>
-  )
+    )
 
+  }
+
+  return (
+    <>
+      {renderHeading()}
+      {renderBlockContainerAsContainingBlock()}
+      {renderGap()}
+      {renderFormattingContextEstablisherAsContainingBlock()}
+
+    </>
+  )
 }
 
-export default Experiment
-    
-*/
+const AbsolutePositionedExamples = () => {
+  const renderHeading = () => {
+    return (
+      <>
+        <h3>Containing block of Absolutely positioned element</h3>
+        <p style={{ marginLeft: 40 }}>
+          if offset properties are not applied to the absolutely positioned elements then
+          the element will be placed where it would have been if it was positioned statically.
+          in the below examples try adding offset properties so that the element gets placed relative to
+          their containing blocks.
+        </p>
+      </>
+    )
+  }
+
+  const renderPositionedBlockAsContainingBlock = () => {
+    return (
+      <div style={{ marginLeft: 40 }}>
+        <p>
+          here the red container is the containing block of the blue container because red container has
+          it's position set to other that static. adding offset properties to absolute positioned container will
+          place the container relative to the red color
+          <br />
+          Note: unlike static/relative positioned elements, here the width of padding-box of containing block will
+          be used for calculating height/width mentioned in %. here in first example the width of blue container is
+          same as of it's containing block's padding-box.
+        </p>
+        <div style={{ position: 'relative', width: 300, height: 200, backgroundColor: 'red', padding: 20 }}>
+          <div style={{ position: 'absolute', width: '100%', height: '80%', backgroundColor: 'blue' }} />
+        </div>
+      </div>
+    )
+  }
+
+  const renderInitialBlockAsContainingBlock = () => {
+    return (
+      <div style={{ marginLeft: 40 }}>
+        <p>
+          here the containing block of the blue container is initial containing block there is not ancestor
+          which is positioned. so it's width is equal to width of <strong>html</strong> element.
+        </p>
+        <div style={{ width: 300, height: 300, backgroundColor: 'red' }}>
+          <div style={{ position: 'absolute', width: '100%', height: 200, backgroundColor: 'blue' }} />
+        </div>
+      </div>
+    )
+  }
+
+  const renderInlineElementAsContainingBlock = () => {
+    const renderDescription = () => {
+      return (
+        <p>
+          when the containing block is an inline element then the first line box's top and left edge serve
+          as reference for the top and left offsets. and last line box's bottom and right edge serve as the
+          reference for bottom and right offsets.
+          <br />
+          in this example the red container is placed 10px away from top and left edge of the first line with green border.
+          same way try putting it with offsets from bottom and right edges and notice how the line box changes for offset
+          reference changes.
+        </p>
+      )
+    }
+
+    return (
+      <div style={{ marginLeft: 40 }}>
+        {renderDescription()}
+        <div style={{ border: 'blue solid 1px' }}>
+          <p style={{ width: 300 }}>Beginning of body contents. Beginning of body contents.
+            <span style={{ position: 'relative', border: 'green solid 1px' }}> Start of outer contents.
+              <span style={{ position: 'absolute', width: 100, height: 100, border: 'red solid 2px', top: 10, left: 10 }}></span>
+              End of outer contents.</span>
+            End of body contents.
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <>
+      {renderHeading()}
+      {renderPositionedBlockAsContainingBlock()}
+      {renderGap()}
+      {renderInitialBlockAsContainingBlock()}
+      {renderGap()}
+      {renderInlineElementAsContainingBlock()}
+    </>
+  )
+}
+
+const FixedPositionedExamples = () => {
+  const renderHeading = () => {
+    return (
+      <>
+        <h3>Containing block of Fixed positioned element</h3>
+        <p style={{ marginLeft: 40 }}>
+          here the the containing block of the blue container is viewport. the dimensions of this blue container will
+          depend on the viewport dimensions now. NOTE: if we don't specify any offset properties to absolute/fixed
+          positioned elements then it's offsets w.r.t containing blcok will be calculated by considering it's position in page
+          if it were placed statically. the element will not cover any space in page layout though.
+        </p>
+      </>
+    )
+  }
+
+  return (
+    <>
+      {renderHeading()}
+      <div style={{ position: 'fixed', width: '10%', height: '10%', backgroundColor: 'pink', right: 10, bottom: 10 }}>
+        fixed positioned example
+      </div>
+    </>
+  )
+}
+
+const renderGap = () => {
+  return (
+    <div style={{ marginTop: 80 }} />
+  )
+}
+
+export const ContainingBlock = () => {
+  return (
+    <>
+      <StaticAndRelativePositionedExamples />
+      <ImportanceOfContainingBlocks />
+      <AbsolutePositionedExamples />
+      {renderGap()}
+      <FixedPositionedExamples />
+    </>
+  )
+}
