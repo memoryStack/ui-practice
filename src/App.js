@@ -10,6 +10,7 @@ import { ContainingBlock } from './cssConcepts/containingBlock';
 import { BlockFormattingContext } from './cssConcepts/blockFormattingContext';
 import { InlineFormattingContext } from './cssConcepts/inlineFormattingContext';
 import { Floats } from './cssConcepts/float';
+import { MarginCollapsing } from './cssConcepts/marginCollapsing';
 
 import './App.css';
 
@@ -27,7 +28,8 @@ function App() {
       {/* <ContainingBlock /> */}
       {/* <BlockFormattingContext /> */}
       {/* <InlineFormattingContext /> */}
-      <Floats />
+      {/* <Floats /> */}
+      <MarginCollapsing />
     </div>
   );
 }
