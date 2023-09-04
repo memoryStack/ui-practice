@@ -1,0 +1,17 @@
+.ball {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  border-radius: 100%;
+  animation: slide-right 2s linear infinite;
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100vw);
+  }
+}
