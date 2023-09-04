@@ -12,9 +12,9 @@ import { InlineFormattingContext } from './cssConcepts/inlineFormattingContext';
 import { Floats } from './cssConcepts/float';
 import { MarginCollapsing } from './cssConcepts/marginCollapsing';
 import { BallLinearAnimation } from './animations/BallLinearAnimation';
+import { BasicTransition } from './animations/BasicTransition';
 
 import './App.css';
-
 
 function App() {
   return (
@@ -32,7 +32,8 @@ function App() {
       {/* <InlineFormattingContext /> */}
       {/* <Floats /> */}
       {/* <MarginCollapsing /> */}
-      <BallLinearAnimation />
+      {/* <BallLinearAnimation /> */}
+      <BasicTransition />
     </div>
   );
 }
