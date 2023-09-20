@@ -5,7 +5,7 @@ import { MinMaxWidthAndHeight } from './cssConcepts/minMaxWidthAndHeight';
 import { IntrinsicVsExtrinsicSizing } from './cssConcepts/intrinsicVsExtrinsicSizing';
 import { Display } from './cssConcepts/display';
 import { MediaQuery } from './cssConcepts/mediaQuery';
-import Test from './cssConcepts/experiment';
+// import Test from './cssConcepts/experiment';
 import { ContainingBlock } from './cssConcepts/containingBlock';
 import { BlockFormattingContext } from './cssConcepts/blockFormattingContext';
 import { InlineFormattingContext } from './cssConcepts/inlineFormattingContext';
@@ -13,8 +13,10 @@ import { Floats } from './cssConcepts/float';
 import { MarginCollapsing } from './cssConcepts/marginCollapsing';
 import { BallLinearAnimation } from './animations/BallLinearAnimation';
 import { BasicTransition } from './animations/BasicTransition';
+import { ToggleButtons } from './toggleButtons';
 
 import './App.css';
+
 
 function App() {
   return (
@@ -33,7 +35,8 @@ function App() {
       {/* <Floats /> */}
       {/* <MarginCollapsing /> */}
       {/* <BallLinearAnimation /> */}
-      <BasicTransition />
+      {/* <BasicTransition /> */}
+      <ToggleButtons />
     </div>
   );
 }
