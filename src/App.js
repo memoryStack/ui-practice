@@ -14,6 +14,7 @@ import { MarginCollapsing } from './cssConcepts/marginCollapsing';
 import { BallLinearAnimation } from './animations/BallLinearAnimation';
 import { BasicTransition } from './animations/BasicTransition';
 import { ToggleButtons } from './toggleButtons';
+import { PseudoElements } from './pseudoElements';
 
 import './App.css';
 
@@ -36,7 +37,8 @@ function App() {
       {/* <MarginCollapsing /> */}
       {/* <BallLinearAnimation /> */}
       {/* <BasicTransition /> */}
-      <ToggleButtons />
+      {/* <ToggleButtons /> */}
+      <PseudoElements />
     </div>
   );
 }
