@@ -15,6 +15,7 @@ import { BallLinearAnimation } from './animations/BallLinearAnimation';
 import { BasicTransition } from './animations/BasicTransition';
 import { ToggleButtons } from './toggleButtons';
 import { PseudoElements } from './pseudoElements';
+import { RangeInput } from './rangeInput';
 
 import './App.css';
 
@@ -38,7 +39,8 @@ function App() {
       {/* <BallLinearAnimation /> */}
       {/* <BasicTransition /> */}
       {/* <ToggleButtons /> */}
-      <PseudoElements />
+      {/* <PseudoElements /> */}
+      <RangeInput />
     </div>
   );
 }
