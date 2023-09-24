@@ -16,6 +16,7 @@ import { BasicTransition } from './animations/BasicTransition';
 import { ToggleButtons } from './toggleButtons';
 import { PseudoElements } from './pseudoElements';
 import { RangeInput } from './rangeInput';
+import { DragDrop } from './dragDrop';
 
 import './App.css';
 
@@ -40,7 +41,8 @@ function App() {
       {/* <BasicTransition /> */}
       {/* <ToggleButtons /> */}
       {/* <PseudoElements /> */}
-      <RangeInput />
+      {/* <RangeInput /> */}
+      <DragDrop />
     </div>
   );
 }
