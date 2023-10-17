@@ -17,8 +17,12 @@ import { ToggleButtons } from './toggleButtons';
 import { PseudoElements } from './pseudoElements';
 import { RangeInput } from './rangeInput';
 import { DragDrop } from './dragDrop';
+import { FlexBox } from './flexBox';
+
+
 
 import './App.css';
+import { ColorSystem as SudokuColorSystem } from './sudokuColorSystem';
 
 
 function App() {
@@ -42,7 +46,9 @@ function App() {
       {/* <ToggleButtons /> */}
       {/* <PseudoElements /> */}
       {/* <RangeInput /> */}
-      <DragDrop />
+      {/* <DragDrop /> */}
+      {/* <FlexBox /> */}
+      <SudokuColorSystem />
     </div>
   );
 }
