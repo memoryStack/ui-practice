@@ -1,0 +1,82 @@
+header {
+  background: purple;
+  height: 100px;
+}
+
+section {
+  display: flex;
+}
+
+article {
+  /* flex: 1; */
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: purple;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+  gap: 1rem;
+  /* background-color: yellow; */
+}
+
+.element {
+  height: 100px;
+  
+}
+
+.elementLeft {
+  background-color: aquamarine;
+}
+
+.elementRight {
+  background-color: blanchedalmond;
+}
+
+/* #left_column *, #right_column * {
+  pointer-events: none;
+} */
+
+.containerOnEnter {
+  background-color: blue;
+}
+
+.animate {
+  animation: 3s infinite both slide-in;
+}
+
+.input {
+  border: 2px solid black;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.translateMore {
+  transform: translateY(100px);
+}
+
+.footer {
+  display: flex;
+  gap: 1rem;
+}

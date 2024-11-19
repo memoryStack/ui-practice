@@ -5,7 +5,8 @@ import { MinMaxWidthAndHeight } from './cssConcepts/minMaxWidthAndHeight';
 import { IntrinsicVsExtrinsicSizing } from './cssConcepts/intrinsicVsExtrinsicSizing';
 import { Display } from './cssConcepts/display';
 import { MediaQuery } from './cssConcepts/mediaQuery';
-// import Test from './cssConcepts/experiment';
+import Test from './cssConcepts/Experiment/experiment';
+import Grid from './cssConcepts/grid/grid';
 import { ContainingBlock } from './cssConcepts/containingBlock';
 import { BlockFormattingContext } from './cssConcepts/blockFormattingContext';
 import { InlineFormattingContext } from './cssConcepts/inlineFormattingContext';
@@ -17,9 +18,8 @@ import { ToggleButtons } from './toggleButtons';
 import { PseudoElements } from './pseudoElements';
 import { RangeInput } from './rangeInput';
 import { DragDrop } from './dragDrop';
-import { FlexBox } from './flexBox';
-
-
+import { Height } from './cssConcepts/height';
+// import { FlexBox } from './flexBox';
 
 import './App.css';
 import { ColorSystem as SudokuColorSystem } from './sudokuColorSystem';
@@ -36,6 +36,7 @@ function App() {
       {/* <Display /> */}
       {/* <MediaQuery /> */}
       {/* <Test /> */}
+      <Grid />
       {/* <ContainingBlock /> */}
       {/* <BlockFormattingContext /> */}
       {/* <InlineFormattingContext /> */}
@@ -48,7 +49,8 @@ function App() {
       {/* <RangeInput /> */}
       {/* <DragDrop /> */}
       {/* <FlexBox /> */}
-      <SudokuColorSystem />
+      {/* <SudokuColorSystem /> */}
+      {/* <Height /> */}
     </div>
   );
 }
