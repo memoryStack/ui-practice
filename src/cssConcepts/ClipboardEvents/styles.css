@@ -1,0 +1,11 @@
+
+.accessClipboardContentContainer {
+    margin-top: 60px;
+}
+
+.copyEventExamplesContainer,
+.cutEventExamplesContainer,
+.pasteEventExamplesContainer {
+    margin-top: 60px;
+    background-color: rgba(0, 255, 0, 0.4);
+}

@@ -25,7 +25,11 @@ import { FlexBox } from './cssConcepts/flexBox';
 import './App.css';
 import { ColorSystem as SudokuColorSystem } from './sudokuColorSystem';
 import { ROUTES, ROUTES_URLS } from "./routes";
+import ClipboardEvents from "./cssConcepts/ClipboardEvents";
 import Home from "./home";
+import Blob from './cssConcepts/Blob'
+import InputMethodEditor from "./cssConcepts/InputMethodEditor";
+import CompositionEvent from "./cssConcepts/CompositionEvent";
 
 const ROUTES_VS_UI = {
   [ROUTES.HOME]: {
@@ -119,6 +123,22 @@ const ROUTES_VS_UI = {
   [ROUTES.HEIGHT]: {
     url: ROUTES_URLS.HEIGHT,
     component: Height,
+  },
+  [ROUTES.CLIPBOARD_EVENT]: {
+    url: ROUTES_URLS.CLIPBOARD_EVENT,
+    component: ClipboardEvents,
+  },
+  [ROUTES.BLOB]: {
+    url: ROUTES_URLS.BLOB,
+    component: Blob,
+  },
+  [ROUTES.INPUT_METHOD_EDITORS]: {
+    url: ROUTES_URLS.INPUT_METHOD_EDITORS,
+    component: InputMethodEditor,
+  },
+  [ROUTES.COMPOSITION_EVENT]: {
+    url: ROUTES_URLS.COMPOSITION_EVENT,
+    component: CompositionEvent
   },
 };
 

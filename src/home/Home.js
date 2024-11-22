@@ -25,6 +25,10 @@ const ROUTES_TITLES = {
     [ROUTES.DRAG_DROP]: 'Some fun with Drag And Drop',
     [ROUTES.FLEX_BOX]: 'What is Flex Box ?',
     [ROUTES.HEIGHT]: 'What is Height property ?',
+    [ROUTES.CLIPBOARD_EVENT]: 'All about Clipboard Events',
+    [ROUTES.BLOB]: 'What is Blob and what can be done with it',
+    [ROUTES.INPUT_METHOD_EDITORS]: 'What is the concept of Input Method Editors',
+    [ROUTES.COMPOSITION_EVENT]: 'Lets talk about composition events',
 }
 
 const Home = () => {  
