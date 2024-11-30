@@ -29,6 +29,7 @@ const ROUTES_TITLES = {
     [ROUTES.BLOB]: 'What is Blob and what can be done with it',
     [ROUTES.INPUT_METHOD_EDITORS]: 'What is the concept of Input Method Editors',
     [ROUTES.COMPOSITION_EVENT]: 'Lets talk about composition events',
+    [ROUTES.CLIPBOARD]: 'All about Clipboard functionality'
 }
 
 const Home = () => {  

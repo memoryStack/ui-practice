@@ -25,7 +25,8 @@ export const ROUTES = {
     CLIPBOARD_EVENT: 'CLIPBOARD_EVENT',
     BLOB: 'BLOB',
     INPUT_METHOD_EDITORS: 'INPUT_METHOD_EDITORS',
-    COMPOSITION_EVENT: 'COMPOSITION_EVENT'
+    COMPOSITION_EVENT: 'COMPOSITION_EVENT',
+    CLIPBOARD: 'CLIPBOARD',
 };
 
 export const ROUTES_URLS = {
@@ -55,5 +56,6 @@ export const ROUTES_URLS = {
     CLIPBOARD_EVENT: '/clipboard-event',
     BLOB: '/blob',
     INPUT_METHOD_EDITORS: '/input-method-editors',
-    COMPOSITION_EVENT: '/composition-event'
+    COMPOSITION_EVENT: '/composition-event',
+    CLIPBOARD: '/clipboard'
 };

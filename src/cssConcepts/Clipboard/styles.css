@@ -1,0 +1,21 @@
+
+
+.buttonsContainer {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.imagePaster {
+    padding-left: 60px;
+    margin-top: 40px;
+    > img {
+        margin-top: 20px;
+    }
+}
+
+.imageFileContent {
+    padding-left: 60px;
+    margin-top: 40px;
+    background-color: aquamarine;
+}

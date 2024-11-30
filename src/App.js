@@ -30,6 +30,7 @@ import Home from "./home";
 import Blob from './cssConcepts/Blob'
 import InputMethodEditor from "./cssConcepts/InputMethodEditor";
 import CompositionEvent from "./cssConcepts/CompositionEvent";
+import Clipboard from "./cssConcepts/Clipboard";
 
 const ROUTES_VS_UI = {
   [ROUTES.HOME]: {
@@ -139,6 +140,10 @@ const ROUTES_VS_UI = {
   [ROUTES.COMPOSITION_EVENT]: {
     url: ROUTES_URLS.COMPOSITION_EVENT,
     component: CompositionEvent
+  },
+  [ROUTES.CLIPBOARD]: {
+    url: ROUTES_URLS.CLIPBOARD,
+    component: Clipboard
   },
 };
 
