@@ -31,6 +31,7 @@ const ROUTES_TITLES = {
     [ROUTES.COMPOSITION_EVENT]: 'Lets talk about composition events',
     [ROUTES.CLIPBOARD]: 'All about Clipboard functionality',
     [ROUTES.LOAD_CSS_ASYNCHRONOUSLY]: 'How to load CSS Asynchronously ?',
+    [ROUTES.COMPRESS_TEXT_ASSETS]: 'How to compress text based Assets ?',
 }
 
 const Home = () => {  

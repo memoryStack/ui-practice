@@ -27,7 +27,8 @@ export const ROUTES = {
     INPUT_METHOD_EDITORS: 'INPUT_METHOD_EDITORS',
     COMPOSITION_EVENT: 'COMPOSITION_EVENT',
     CLIPBOARD: 'CLIPBOARD',
-    LOAD_CSS_ASYNCHRONOUSLY: 'LOAD_CSS_ASYNCHRONOUSLY'
+    LOAD_CSS_ASYNCHRONOUSLY: 'LOAD_CSS_ASYNCHRONOUSLY',
+    COMPRESS_TEXT_ASSETS: 'COMPRESS_TEXT_ASSETS'
 };
 
 export const ROUTES_URLS = {
@@ -59,5 +60,6 @@ export const ROUTES_URLS = {
     INPUT_METHOD_EDITORS: '/input-method-editors',
     COMPOSITION_EVENT: '/composition-event',
     CLIPBOARD: '/clipboard',
-    LOAD_CSS_ASYNCHRONOUSLY: '/load-css-asynchronously'
+    LOAD_CSS_ASYNCHRONOUSLY: '/load-css-asynchronously',
+    COMPRESS_TEXT_ASSETS: '/compress-text-based-assets',
 };

@@ -1,6 +1,9 @@
 const express = require('express');
+const compression = require('compression');
 const app = express();
 const path = require('path');
+
+app.use(compression());
 
 app.use((req, res, next) => {
     if (/(.ico|.js|.css|.jpg|.png|.map)$/i.test(req.path)) {
@@ -12,8 +15,6 @@ app.use((req, res, next) => {
         res.sendFile(path.join(__dirname, '../build', 'index.html'));
     }
 });
-
-console.log('@@@@@ xx', path.join(__dirname, '../build'))
 
 app.use(express.static(path.join(__dirname, '../build')));
 
