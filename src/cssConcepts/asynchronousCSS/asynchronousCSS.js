@@ -77,6 +77,17 @@ const AsynchronousCSS = () => {
                     "critical" package depends on the "puppeteer" to run Headless chrome and i guess it will actually run the page
                     and then extract the CSS. But i am not sure, have never tries puppeteer at all. 
                 </p>
+
+                <h1>ALERT!!! ALERT!!! ALERT!!!</h1>
+                <p>
+                    web-dev says that <b>This guide describes an advanced performance technique that can improve performance, but can also lead to bugs
+                    if not implemented properly</b>, now i wonder what kind of bugs might creep in ??
+                    <br/>
+                    For example, does the tool we are using to extract the critical CSS also included <code translate="no" dir="ltr">@font-face</code>
+                    rules because if it doesn't then we might have a big layout shift.
+                    <br/>
+                    TODO: someday make a full list of all the issues that might creep in.
+                </p>
             </div>
         )
     }
