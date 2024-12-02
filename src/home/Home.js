@@ -29,7 +29,8 @@ const ROUTES_TITLES = {
     [ROUTES.BLOB]: 'What is Blob and what can be done with it',
     [ROUTES.INPUT_METHOD_EDITORS]: 'What is the concept of Input Method Editors',
     [ROUTES.COMPOSITION_EVENT]: 'Lets talk about composition events',
-    [ROUTES.CLIPBOARD]: 'All about Clipboard functionality'
+    [ROUTES.CLIPBOARD]: 'All about Clipboard functionality',
+    [ROUTES.LOAD_CSS_ASYNCHRONOUSLY]: 'How to load CSS Asynchronously ?',
 }
 
 const Home = () => {  

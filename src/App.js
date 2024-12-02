@@ -31,6 +31,8 @@ import Blob from './cssConcepts/Blob'
 import InputMethodEditor from "./cssConcepts/InputMethodEditor";
 import CompositionEvent from "./cssConcepts/CompositionEvent";
 import Clipboard from "./cssConcepts/Clipboard";
+import AsynchronousCSS from "./cssConcepts/asynchronousCSS";
+
 
 const ROUTES_VS_UI = {
   [ROUTES.HOME]: {
@@ -144,6 +146,10 @@ const ROUTES_VS_UI = {
   [ROUTES.CLIPBOARD]: {
     url: ROUTES_URLS.CLIPBOARD,
     component: Clipboard
+  },
+  [ROUTES.LOAD_CSS_ASYNCHRONOUSLY]: {
+    url: ROUTES_URLS.LOAD_CSS_ASYNCHRONOUSLY,
+    component: AsynchronousCSS
   },
 };
 

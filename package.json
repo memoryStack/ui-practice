@@ -1,5 +1,5 @@
 {
-  "homepage": "https://memoryStack.github.io/ui-practice",
+  "homepage": "https://memoryStack.github.io",
   "name": "ui-practice",
   "version": "0.1.0",
   "private": true,
@@ -10,6 +10,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.2",
+    "critical": "^7.2.1",
     "mobx": "^6.13.1",
     "mobx-react": "^9.1.1",
     "react": "^18.2.0",
@@ -47,6 +48,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.2.0"
+    "gh-pages": "^6.2.0",
+    "html-critical-webpack-plugin": "^2.1.0"
   }
 }
