@@ -71,3 +71,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 Use below to host pages on custom domain
 https://blog.logrocket.com/deploying-react-apps-github-pages/
+
+website is hosted at below AWS bucket statically
+http://anuj-areen-demo-s3.s3-website.ap-south-1.amazonaws.com/
