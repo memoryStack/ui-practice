@@ -33,6 +33,12 @@ import CompositionEvent from "./cssConcepts/CompositionEvent";
 import Clipboard from "./cssConcepts/Clipboard";
 import AsynchronousCSS from "./cssConcepts/asynchronousCSS";
 import CompressTextAssets from './cssConcepts/textBasedAssetsCompression'
+import MyPromise from './cssConcepts/designYourOwnPromise'
+import ObserveStatePattern from './cssConcepts/ObserveStatePattern'
+import Http2VSHttp1 from './cssConcepts/http1ToHttp2'
+import RequestAnimationFrame from './cssConcepts/RequestAnimationFrame'
+import WebShareAPI from './browserAPIs/WebShareAPI'
+import { OpenAI } from "./cssConcepts/openAI/OpenAI";
 
 const ROUTES_VS_UI = {
   [ROUTES.HOME]: {
@@ -154,6 +160,26 @@ const ROUTES_VS_UI = {
   [ROUTES.COMPRESS_TEXT_ASSETS]: {
     url: ROUTES_URLS.COMPRESS_TEXT_ASSETS,
     component: AsynchronousCSS
+  },
+  [ROUTES.MY_PROMISE]: {
+    url: ROUTES_URLS.MY_PROMISE,
+    component: OpenAI
+  },
+  [ROUTES.OBSERVE_STATE]: {
+    url: ROUTES_URLS.OBSERVE_STATE,
+    component: ObserveStatePattern
+  },
+  [ROUTES.HTTP2_VS_HTTP1]: {
+    url: ROUTES_URLS.HTTP2_VS_HTTP1,
+    component: Http2VSHttp1
+  },
+  [ROUTES.REQUEST_ANIMATION_FRAME]: {
+    url: ROUTES_URLS.REQUEST_ANIMATION_FRAME,
+    component: OpenAI
+  },
+  [ROUTES.WEB_SHARE_API]: {
+    url: ROUTES_URLS.WEB_SHARE_API,
+    component: WebShareAPI
   },
 };
 

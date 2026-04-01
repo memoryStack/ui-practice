@@ -13,6 +13,7 @@
     "critical": "^7.2.1",
     "mobx": "^6.13.1",
     "mobx-react": "^9.1.1",
+    "openai": "^4.76.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.28.0",

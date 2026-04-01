@@ -11,39 +11,39 @@ module.exports = {
               isCore: true,
           },
           10: {
-              value: '#21005D',
+              value: '#001550ff',
               isCore: true,
           },
           20: {
-              value: '#381E72',
+              value: '#00277fff',
               isCore: true,
           },
           30: {
-              value: '#4F378B',
+              value: '#003ab2ff',
               isCore: true,
           },
           40: {
-              value: '#6750A4',
+              value: '#2653d3ff',
               isCore: true,
           },
           50: {
-              value: '#7F67BE',
+              value: '#466dedff',
               isCore: true,
           },
           60: {
-              value: '#9A82DB',
+              value: '#6889ffff',
               isCore: true,
           },
           70: {
-              value: '#B69DF8',
+              value: '#90a7ffff',
               isCore: true,
           },
           80: {
-              value: '#D0BCFF',
+              value: '#b6c4ffff',
               isCore: true,
           },
           90: {
-              value: '#EADDFF',
+              value: '#dce1ffff',
               isCore: true,
           },
           95: {

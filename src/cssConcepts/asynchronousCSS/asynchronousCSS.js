@@ -1,3 +1,18 @@
+/*
+
+    Extracting and maintaining critical styles can be difficult. Which styles should be included?
+    Which viewport(s) should be targeted? Can the process be automated? What happens if a user
+    scrolls down before the non-critical CSS has loaded? How are users affected if they experience
+    a FOUC? These are all good questions that should be considered, as your website's architecture
+    may make using critical CSS prohibitively difficult. However, the performance benefits can be
+    worth the effort in some select cases, so investigate whether critical CSS is a viable option for your website!
+
+    On the downside, inlining a large amount of CSS adds more bytes to the initial HTML response.
+    Because HTML resources often can't be cached for very long—or at all—this means that the inlined
+    CSS is not cached for subsequent pages that may use the same CSS in external style sheets.
+    Test and measure your page's performance to make sure the trade-offs are worth the effort.
+
+*/
 
 const AsynchronousCSS = () => {
     const problemTryingToSolve = () => {

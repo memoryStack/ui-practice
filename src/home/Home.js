@@ -32,11 +32,21 @@ const ROUTES_TITLES = {
     [ROUTES.CLIPBOARD]: 'All about Clipboard functionality',
     [ROUTES.LOAD_CSS_ASYNCHRONOUSLY]: 'How to load CSS Asynchronously ?',
     [ROUTES.COMPRESS_TEXT_ASSETS]: 'How to compress text based Assets ?',
+    [ROUTES.EXTENSIONS_IMPACT_ON_PERFORMANCE]: 'How JS in extensions impact the page\'s performance ?',
+    [ROUTES.CRITICAL_RENDERING_PATH]: 'WTH is Critical Rendering Path ?',
+    [ROUTES.MY_PROMISE]: 'Write my own version of Promise.',
+    [ROUTES.OBSERVE_STATE]: 'Observer Pattern for State Management.',
+    [ROUTES.HTTP2_VS_HTTP1]: 'how to setup http2 with express',
+    [ROUTES.REQUEST_ANIMATION_FRAME]: 'How requestAnimationFrame (RAF) works',
+    [ROUTES.SUDOKU_COLOR_SYSTEM]: 'SUDOKU COLOR SYSTEM',
+    [ROUTES.WEB_SHARE_API]: 'Web Share API',
 }
 
 const Home = () => {  
     return (
-        <ul className={'linksContainer'}>
+        <ul className={'linksContainer'}>            
+            <Link key={'experience'} to={'https://mikefallows.com/posts/2/'}>{'Learn from somebody\'s experience'}</Link>
+            <Link key={'interview-guide'} to={'https://github.com/yangshun/front-end-interview-handbook'}>{'extensive guide for preparing for interviews'}</Link>
             {
                 Object.keys(ROUTES).map((route) => {
                     const title = ROUTES_TITLES[route]
