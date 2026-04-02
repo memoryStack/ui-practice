@@ -36,6 +36,7 @@ export const ROUTES = {
     WEB_SHARE_API: 'WEB_SHARE_API',
     POPUPS_IFRAMES: 'POPUPS_IFRAMES',
     INDEXED_DB: 'INDEXED_DB',
+    USE_BREAKPOINTS: 'USE_BREAKPOINTS',
     // EXTENSIONS_IMPACT_ON_PERFORMANCE: 'EXTENSIONS_IMPACT_ON_PERFORMANCE',
     // CRITICAL_RENDERING_PATH: 'CRITICAL_RENDERING_PATH',
 };
@@ -80,4 +81,5 @@ export const ROUTES_URLS = {
     WEB_SHARE_API: '/web-share-api',
     POPUPS_IFRAMES: '/popups-and-iframes',
     INDEXED_DB: '/indexed-db',
+    USE_BREAKPOINTS: '/use-breakpoints',
 };

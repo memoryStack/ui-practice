@@ -39,6 +39,7 @@ import Http2VSHttp1 from './cssConcepts/http1ToHttp2'
 import RequestAnimationFrame from './cssConcepts/RequestAnimationFrame'
 import WebShareAPI from './browserAPIs/WebShareAPI'
 import PopupsAndIframes from './browserAPIs/PopupsAndIframes'
+import Breakpoints from './browserAPIs/Breakpoints'
 import { OpenAI } from "./cssConcepts/openAI/OpenAI";
 
 const ROUTES_VS_UI = {
@@ -189,6 +190,10 @@ const ROUTES_VS_UI = {
   [ROUTES.INDEXED_DB]: {
     url: ROUTES_URLS.INDEXED_DB,
     component: <></>
+  },
+  [ROUTES.USE_BREAKPOINTS]: {
+    url: ROUTES_URLS.USE_BREAKPOINTS,
+    component: Breakpoints
   },
 };
 

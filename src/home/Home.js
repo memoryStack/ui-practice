@@ -42,6 +42,7 @@ const ROUTES_TITLES = {
     [ROUTES.WEB_SHARE_API]: 'Web Share API',
     [ROUTES.POPUPS_IFRAMES]: 'Popups and Iframes',
     [ROUTES.INDEXED_DB]: 'IndexedDB',
+    [ROUTES.USE_BREAKPOINTS]: 'Use Breakpoints',
 }
 
 const Home = () => {  
