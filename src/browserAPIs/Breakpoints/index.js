@@ -5,6 +5,7 @@ import './styles.css'
 /*
     1. use window.matchMedia API to get the breakpoints
     2. use resize observer to get the breakpoints
+    3. using window.onresize
 */
 
 const devices = {
@@ -22,7 +23,7 @@ const devices = {
     },
     desktop: {
         minWidth: 901,
-        maxWidth: Infinity
+        maxWidth: 1000000
     }
 }
 
@@ -34,7 +35,7 @@ const debounce = (func, delay) => {
     }
 }
 
-const useBreakpoints = () => {
+const useBreakpointsWindowResize = () => {
     const [currentDevice, setCurrentDevice] = useState({})
 
     const checkDevices = (windowWidth) => {
@@ -60,9 +61,33 @@ const useBreakpoints = () => {
     return currentDevice
 }
 
+const useBreakpointsMatchMedia = () => {
+    const [currentDevice, setCurrentDevice] = useState({})
+
+    useEffect(() => {
+        const firstTimeDeviceState = {}
+        for (const [device, range] of Object.entries(devices)) {
+            const mediaQuery = window.matchMedia(`(min-width: ${range.minWidth}px) and (max-width: ${range.maxWidth}px)`)
+            firstTimeDeviceState[device] = mediaQuery.matches
+            mediaQuery.addEventListener('change', (e) => {
+                setCurrentDevice((prev) => {
+                    return {
+                        ...prev,
+                        [device]: e.matches
+                    }
+                })
+            })
+        }
+        setCurrentDevice(firstTimeDeviceState)
+    }, [])
+
+    return currentDevice
+}
+
 const Breakpoints = () => {
 
-    const devices = useBreakpoints()
+    // const devices = useBreakpointsWindowResize()
+    const devices = useBreakpointsMatchMedia()
 
     return (
         <div className="container">
