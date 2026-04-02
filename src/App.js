@@ -38,6 +38,7 @@ import ObserveStatePattern from './cssConcepts/ObserveStatePattern'
 import Http2VSHttp1 from './cssConcepts/http1ToHttp2'
 import RequestAnimationFrame from './cssConcepts/RequestAnimationFrame'
 import WebShareAPI from './browserAPIs/WebShareAPI'
+import PopupsAndIframes from './browserAPIs/PopupsAndIframes'
 import { OpenAI } from "./cssConcepts/openAI/OpenAI";
 
 const ROUTES_VS_UI = {
@@ -180,6 +181,10 @@ const ROUTES_VS_UI = {
   [ROUTES.WEB_SHARE_API]: {
     url: ROUTES_URLS.WEB_SHARE_API,
     component: WebShareAPI
+  },
+  [ROUTES.POPUPS_IFRAMES]: {
+    url: ROUTES_URLS.POPUPS_IFRAMES,
+    component: PopupsAndIframes
   },
 };
 

@@ -40,6 +40,7 @@ const ROUTES_TITLES = {
     [ROUTES.REQUEST_ANIMATION_FRAME]: 'How requestAnimationFrame (RAF) works',
     [ROUTES.SUDOKU_COLOR_SYSTEM]: 'SUDOKU COLOR SYSTEM',
     [ROUTES.WEB_SHARE_API]: 'Web Share API',
+    [ROUTES.POPUPS_IFRAMES]: 'Popups and Iframes',
 }
 
 const Home = () => {  
