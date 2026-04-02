@@ -84,10 +84,40 @@ const useBreakpointsMatchMedia = () => {
     return currentDevice
 }
 
-const Breakpoints = () => {
+const useBreakpointsResizeObserver = () => {
+    const [currentDevice, setCurrentDevice] = useState({})
 
+    const checkDevices = (windowWidth) => {
+        const result = {}
+        for (const [device, range] of Object.entries(devices)) {
+            result[device] = windowWidth >= range.minWidth && windowWidth <= range.maxWidth
+        }
+        return result
+    }
+
+    useEffect(() => {
+        const devices = checkDevices(window.innerWidth)
+        setCurrentDevice(devices)
+
+        const resizeObserver = new ResizeObserver(entries => {
+            const innerWidth = entries[0].contentRect.width
+            setCurrentDevice(checkDevices(innerWidth))
+        })
+
+        resizeObserver.observe(document.querySelector('html'))
+
+        return () => {
+            resizeObserver.disconnect()
+        }
+    }, [])
+
+    return currentDevice
+}
+
+const Breakpoints = () => {
     // const devices = useBreakpointsWindowResize()
-    const devices = useBreakpointsMatchMedia()
+    // const devices = useBreakpointsMatchMedia()
+    const devices = useBreakpointsResizeObserver()
 
     return (
         <div className="container">
