@@ -186,6 +186,10 @@ const ROUTES_VS_UI = {
     url: ROUTES_URLS.POPUPS_IFRAMES,
     component: PopupsAndIframes
   },
+  [ROUTES.INDEXED_DB]: {
+    url: ROUTES_URLS.INDEXED_DB,
+    component: <></>
+  },
 };
 
 function App() {

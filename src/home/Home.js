@@ -41,6 +41,7 @@ const ROUTES_TITLES = {
     [ROUTES.SUDOKU_COLOR_SYSTEM]: 'SUDOKU COLOR SYSTEM',
     [ROUTES.WEB_SHARE_API]: 'Web Share API',
     [ROUTES.POPUPS_IFRAMES]: 'Popups and Iframes',
+    [ROUTES.INDEXED_DB]: 'IndexedDB',
 }
 
 const Home = () => {  
