@@ -43,6 +43,7 @@ const ROUTES_TITLES = {
     [ROUTES.POPUPS_IFRAMES]: 'Popups and Iframes',
     [ROUTES.INDEXED_DB]: 'IndexedDB',
     [ROUTES.USE_BREAKPOINTS]: 'Use Breakpoints',
+    [ROUTES.RESIZE_OBSERVER]: 'Resize Observer',
 }
 
 const Home = () => {  

@@ -40,6 +40,7 @@ import RequestAnimationFrame from './cssConcepts/RequestAnimationFrame'
 import WebShareAPI from './browserAPIs/WebShareAPI'
 import PopupsAndIframes from './browserAPIs/PopupsAndIframes'
 import Breakpoints from './browserAPIs/Breakpoints'
+import ResizeObserver from './browserAPIs/ResizeObserver'
 import { OpenAI } from "./cssConcepts/openAI/OpenAI";
 
 const ROUTES_VS_UI = {
@@ -194,6 +195,10 @@ const ROUTES_VS_UI = {
   [ROUTES.USE_BREAKPOINTS]: {
     url: ROUTES_URLS.USE_BREAKPOINTS,
     component: Breakpoints
+  },
+  [ROUTES.RESIZE_OBSERVER]: {
+    url: ROUTES_URLS.RESIZE_OBSERVER,
+    component: ResizeObserver
   },
 };
 

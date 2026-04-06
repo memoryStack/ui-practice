@@ -3,14 +3,9 @@ import { useEffect } from 'react';
 import './styles.css'
 
 /*
-    https://web.dev/articles/resize-observer
-    this talks about layout thrashing due to window.onresize and how to avoid it 
-
-    TODO: what is layout thrashing ? and how does it happen ?
-
-    read about below as well
-    https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing#avoid_forced_synchronous_layouts
-
+    1. use window.matchMedia API to get the breakpoints
+    2. use resize observer to get the breakpoints
+    3. using window.onresize
 */
 
 const devices = {
