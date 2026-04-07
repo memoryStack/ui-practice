@@ -1,10 +1,9 @@
 require('dotenv').config(); // Load .env file
-
 const express = require('express')
-
 const session = require('express-session')
-
 const cors = require('cors')
+
+const allRoutes = require('./src/routes')
 
 const app = express()
 
@@ -39,6 +38,9 @@ app.use(session({
     },
     name: 'sessionID'
 }))
+
+// set all the routes from files
+allRoutes(app)
 
 app.get('/', (req, res) => {
     res.status(200).send('Hello, world!');
