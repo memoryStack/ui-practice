@@ -44,7 +44,11 @@ const ROUTES_TITLES = {
     [ROUTES.INDEXED_DB]: 'IndexedDB',
     [ROUTES.USE_BREAKPOINTS]: 'Use Breakpoints',
     [ROUTES.RESIZE_OBSERVER]: 'Resize Observer',
+    [ROUTES.COOKIES]: 'Cookies All Use-Cases',
 }
+
+window.LOCAL_SERVER_DOMAIN = 'http://localhost:8080'
+
 
 const Home = () => {  
     return (

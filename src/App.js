@@ -41,6 +41,7 @@ import WebShareAPI from './browserAPIs/WebShareAPI'
 import PopupsAndIframes from './browserAPIs/PopupsAndIframes'
 import Breakpoints from './browserAPIs/Breakpoints'
 import ResizeObserver from './browserAPIs/ResizeObserver'
+import Cookies from './browserAPIs/Cookies'
 import { OpenAI } from "./cssConcepts/openAI/OpenAI";
 
 const ROUTES_VS_UI = {
@@ -199,6 +200,10 @@ const ROUTES_VS_UI = {
   [ROUTES.RESIZE_OBSERVER]: {
     url: ROUTES_URLS.RESIZE_OBSERVER,
     component: ResizeObserver
+  },
+  [ROUTES.COOKIES]: {
+    url: ROUTES_URLS.COOKIES,
+    component: Cookies
   },
 };
 
