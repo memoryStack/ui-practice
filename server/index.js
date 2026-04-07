@@ -2,6 +2,7 @@ require('dotenv').config(); // Load .env file
 const express = require('express')
 const session = require('express-session')
 const cors = require('cors')
+const cookieParser = require('cookie-parser')
 
 const allRoutes = require('./src/routes')
 
@@ -22,6 +23,8 @@ app.use(cors({
     origin: CLIENT_ORIGIN,
     credentials: true,
 }))
+
+app.use(cookieParser())
 
 app.use(express.json()) // to ensure we can access user sent data via req.body
 

@@ -12,10 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "compression": "^1.7.5",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "dotenv": "^16.4.7",
     "express": "^4.21.1",
     "express-session": "^1.19.0",
+    "jsonwebtoken": "^9.0.3",
     "spdy": "^4.0.2"
   }
 }

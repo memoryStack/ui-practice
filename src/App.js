@@ -42,6 +42,7 @@ import PopupsAndIframes from './browserAPIs/PopupsAndIframes'
 import Breakpoints from './browserAPIs/Breakpoints'
 import ResizeObserver from './browserAPIs/ResizeObserver'
 import Cookies from './browserAPIs/Cookies'
+import JWTAuth from './browserAPIs/JWTAuth'
 import { OpenAI } from "./cssConcepts/openAI/OpenAI";
 
 const ROUTES_VS_UI = {
@@ -204,6 +205,10 @@ const ROUTES_VS_UI = {
   [ROUTES.COOKIES]: {
     url: ROUTES_URLS.COOKIES,
     component: Cookies
+  },
+  [ROUTES.JWT_AUTHENTICATION]: {
+    url: ROUTES_URLS.JWT_AUTHENTICATION,
+    component: JWTAuth
   },
 };
 
