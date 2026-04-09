@@ -74,3 +74,4 @@ https://blog.logrocket.com/deploying-react-apps-github-pages/
 
 website is hosted at below AWS bucket statically
 http://anuj-areen-demo-s3.s3-website.ap-south-1.amazonaws.com/
+https://d3vs3rd7hdsari.cloudfront.net/
