@@ -3,7 +3,9 @@ const express = require('express')
 const session = require('express-session')
 const cors = require('cors')
 const cookieParser = require('cookie-parser')
-
+const spdy = require('spdy')
+const path = require('path')
+const fs = require('fs')
 const allRoutes = require('./src/routes')
 
 const app = express()
@@ -12,6 +14,9 @@ const PORT = process.env.PORT || 8080
 
 // Browser app origin (e.g. CRA dev server). Required when using credentials + cookies cross-origin.
 const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || 'http://localhost:3000'
+
+const CERT_DIR = `${__dirname}/cert`
+const useSSL = true
 
 const sleep = () => {
     return new Promise((r) => {
@@ -76,6 +81,11 @@ app.get('/logout', (req, res) => {
 })
 
 function createServer() {
+    if (!useSSL) return app
+    return spdy.createServer({
+        key: fs.readFileSync(`${CERT_DIR}/server.key`),
+        cert: fs.readFileSync(`${CERT_DIR}/server.cert`),
+    }, app);
     return app
 }
 
